@@ -1,8 +1,8 @@
-# digital-menu
+<h1> digital-menu </h1>
 
-<h1> PROJETO FINAL </h1>
+<h2> PROJETO FINAL </h2>
 
-<h2> PRINCIPAL (1000XP) </h2>
+<h3> PRINCIPAL (1000XP) </h3>
 
 <ul>
   <li> Fazer um cardápio/catálogo digital; </li>
