@@ -30,3 +30,53 @@ header {
     border-radius: 20px;
     cursor: pointer;
 }
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+    background-color: var(--back);
+    color: var(--text-primary);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn-price {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    outline: none;
+    border: 1px solid transparent;
+    color: var(--text-primary);
+    background-color: var(--back);
+    padding: 5px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn-price:hover {
+    background-color: var(--hover-option);
+    color: var(--back);
+    transition: 0.3s;
+}
+
+@media(max-width: 991px) {
+    .navigation {
+        padding: 10px;
+        align-items: flex-end;
+    }
+
+    .disposition {
+        margin: 20px;
+    }
+}
+
+@media(max-width: 767px) {
+    .navigation {
+        flex-direction: column;
+    }
+}
