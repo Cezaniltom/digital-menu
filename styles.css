@@ -1,0 +1,32 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Bebas neue;
+}
+
+:root {
+    --back: #20170E;
+    --text-primary:  #F3DFA0;
+    --hover-option:  #D77F33;
+    --name-paragraphy:  #EAEAEA;
+}
+
+body {
+    background-color:  var(--back) !important;
+}
+
+header {
+    padding-top: 20px;
+}
+
+.tittle {
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: var(--back);
+    color: var(--text-primary);
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
