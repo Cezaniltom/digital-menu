@@ -64,6 +64,29 @@ header {
     transition: 0.3s;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    height: 50vh;
+    padding-left: 300px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 600px;
+}
+
+@media(max-width: 1200px) {
+
+    .about {
+        margin-left: 400px;
+    }
+}
+
 @media(max-width: 991px) {
     .navigation {
         padding: 10px;
@@ -73,10 +96,18 @@ header {
     .disposition {
         margin: 20px;
     }
+
+    .about {
+        margin-left: 200px;
+    }
 }
 
 @media(max-width: 767px) {
     .navigation {
         flex-direction: column;
+    }
+
+    .about {
+        margin-left: 40px;
     }
 }
