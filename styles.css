@@ -80,6 +80,16 @@ header {
     margin-left: 19rem;
 }
 
+.footer {
+    color: var(--name-paragraphy);
+    font-size: 20px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 @media(max-width: 1200px) {
 
     .about {
