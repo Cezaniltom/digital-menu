@@ -13,7 +13,7 @@ if(!burgerJSON) {
     localStorage.setItem("burgerArray", JSON.stringify(burgerArray));
 } else {
     burgerArray = JSON.parse(burgerJSON);
-} 
+}
 
 const header = new HeaderComponent();
 
