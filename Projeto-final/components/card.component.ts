@@ -19,7 +19,7 @@ export default class CardComponent {
                         <p class="card-text">${ingredientes}.</p>
                     </div>
                     <div class="mb-5">
-                        <h4 class="price">R$ ${novoBurger.preco},00</h4>
+                        <h4 class="price">R$ ${novoBurger.preco}</h4>
                         <button type="button" class="btn btn-warning"><i class="fa fa-pencil"></i>&ensp;Editar</button>&ensp;
                         <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i>&ensp;Deletar</button>
                     </div>

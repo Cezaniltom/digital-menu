@@ -7,23 +7,25 @@ export default class FormComponent {
 
     render() {
         return `
-            <div class="input-group mt-3 mb-2">
-                <label class="input-group-text" for="imagem">Imagem (URL)</label>
-                <input type="url" class="form-control p-1" id="imagem" name="imagem" required>
+            <div class="input-group">
+                <label class="input-form" for="imagem">Imagem (URL)</label>
+                <input type="url" class="form-control" id="imagem" name="imagem" required>
             </div> 
-            <div class=" input-group mb-3">
-                <label class="input-group-text" for="nome">Nome do Produto</label>
+            <div class=" input-group">
+                <label class="input-form" for="nome">Nome do Produto</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: X-tudo" required/>
             </div>
-            <div class="input-group mb-3">
-                <label class="input-group-text" for="preco">Valor</label>
-                <input type="number" class="form-control" id="preco" name="preco" placeholder="Ex: 20" required/>
+            <div class="input-group">
+                <label class="input-form" for="preco">Valor</label>
+                <input type="number" class="form-control" id="preco" name="preco" placeholder="Ex: 20,90" required/>
             </div>   
             <div class="input-group">
-                <label class="input-group-text" for="ingredientes">Ingredientes</label>
+                <label class="input-form" for="ingredientes">Ingredientes</label>
                 <textarea class="form-control" id="ingredientes" name="ingredientes" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <div id=cadastrar>
+                <button type="submit" class="btn btn-outline-light" id="cadastrar">Cadastrar</button>
+            </div>
         `;
     }
 }

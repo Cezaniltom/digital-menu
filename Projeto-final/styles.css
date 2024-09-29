@@ -133,3 +133,29 @@ header {
         margin-left: 2.5rem;
     }
 }
+
+label.input-form {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+    padding: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+#imagem, #nome, #preco, #ingredientes {
+    border-radius: 5px;
+    width: 50%;
+}
+
+#form-burger {
+    width: 80%;
+}
+
+.input-group {
+    padding: 0 0 10px 0;
+}
+
+#cadastrar {
+    margin: 15px 0 0 0;
+    text-align: center;
+}
