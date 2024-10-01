@@ -16,8 +16,8 @@ export default class HeaderComponent {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav nav-pills px-5">
                     <li class="nav-item active px-4 mb-3"><a href="index.html" type="button" class="btn btn-outline-light ml-4">Início</a></li>
-                    <li class="nav-item active px-4 mb-3"><a href="sobre.html" type="button" class="btn btn-outline-light ml-4">Sobre nós</a></li>
-                    <li class="nav-item"><a href="cadastro.html" type="button" class="btn btn-outline-light ml-5">Cadastrar Burger</a></li>
+                    <li class="nav-item active px-4 mb-3"><a href="about.html" type="button" class="btn btn-outline-light ml-4">Sobre nós</a></li>
+                    <li class="nav-item"><a href="create.html" type="button" class="btn btn-outline-light ml-5">Cadastrar Burger</a></li>
                 </ul>
             </div>
             </nav>

@@ -1,6 +1,6 @@
-import CardComponent from "./components/card.component.js";
-import FooterComponent from "./components/footer.component.js";
-import HeaderComponent from "./components/header.component.js";
+import CardComponent from "../components/card.component.js";
+import FooterComponent from "../components/footer.component.js";
+import HeaderComponent from "../components/header.component.js";
 //const burgerArray: Array<Burger> | null = localStorage.getItem("burgerArray");
 let burgerArray = [];
 const burgerJSON = localStorage.getItem("burgerArray");

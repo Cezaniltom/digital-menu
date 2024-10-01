@@ -16,8 +16,8 @@ export default class CardComponent {
                     </div>
                     <div class="mb-5">
                         <h4 class="price">R$ ${novoBurger.preco}</h4>
-                        <button type="button" class="btn btn-warning"><i class="fa fa-pencil"></i>&ensp;Editar</button>&ensp;
-                        <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i>&ensp;Deletar</button>
+                        <a href="/update.html?id=${novoBurger.id}" type="button" class="btn btn-warning"><i class="fa fa-pencil"></i>&ensp;Editar</a>&ensp;
+                        <a type="button" class="btn btn-danger"><i class="fa fa-trash"></i>&ensp;Deletar</a>
                     </div>
                 </div>
             </div>
