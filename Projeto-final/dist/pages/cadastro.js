@@ -1,6 +1,6 @@
-import FooterComponent from "./components/footer.component.js";
-import FormComponent from "./components/form.component.js";
-import HeaderComponent from "./components/header.component.js";
+import FooterComponent from "../components/footer.component.js";
+import FormComponent from "../components/form.component.js";
+import HeaderComponent from "../components/header.component.js";
 const header = new HeaderComponent();
 const form = new FormComponent();
 const burgerForm = document.getElementById("burgerForm");
