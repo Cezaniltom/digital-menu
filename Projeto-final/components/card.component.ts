@@ -6,7 +6,7 @@ export default class CardComponent {
 
         if (cardsList) {
             cardsList.innerHTML += this.render(novoBurger);
-            this.addDeleteEventListener(); // Adicionar evento de deletar após renderizar
+            this.addDeleteEventListener();
         }
     }
 
@@ -41,27 +41,66 @@ export default class CardComponent {
                 const target = event.currentTarget as HTMLElement;
                 const burgerId = target.getAttribute('data-id');
                 if (burgerId) {
-                    this.deleteBurger(burgerId);
+                    this.showDeleteConfirmationModal(burgerId);
                 }
             });
         });
     }
 
+    showDeleteConfirmationModal(burgerId: string) {
+        // Cria o modal na propria pagina
+        const modal = document.createElement('div');
+        modal.innerHTML = `
+            <div class="modal fade show" id="deleteModal" tabindex="-1" style="display:block;" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteModalLabel">Confirmação de Exclusão</h5>
+                            <button type="button" class="close" id="closeModal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Tem certeza que deseja deletar este item?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="cancelDelete">Cancelar</button>
+                            <button type="button" class="btn btn-danger" id="confirmDelete">Deletar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+
+        // Fecha o modal
+        const closeModal = () => {
+            modal.remove();
+        };
+
+        document.getElementById('closeModal')?.addEventListener('click', closeModal);
+        document.getElementById('cancelDelete')?.addEventListener('click', closeModal);
+
+        // Confirma a exclusão do item
+        document.getElementById('confirmDelete')?.addEventListener('click', () => {
+            this.deleteBurger(burgerId);
+            closeModal();
+        });
+    }
+
     deleteBurger(burgerId: string) {
-        // Carregar a lista de burgers do localStorage
+        // Carrega a lista dos itens doo localStorage
         let burgers = this.getBurgersFromLocalStorage();
 
-        // Encontrar o índice do burger a ser removido
+        // Encontra o índice do array para ser removido
         const index = burgers.findIndex((burger: { id: string; }) => burger.id === burgerId);
 
         if (index !== -1) {
-            // Remover o burger pelo índice
             burgers.splice(index, 1);
 
-            // Atualizar o localStorage
             localStorage.setItem('burgerArray', JSON.stringify(burgers));
 
-            // Remover o card do DOM
             const burgerElement = document.getElementById(`burger-${burgerId}`);
             if (burgerElement) {
                 burgerElement.remove();
@@ -69,7 +108,7 @@ export default class CardComponent {
         }
     }
 
-    // Método para carregar burgers do localStorage
+    // Carrega os itens do localStorage
     getBurgersFromLocalStorage() {
         const burgersJSON = localStorage.getItem('burgerArray');
         return burgersJSON ? JSON.parse(burgersJSON) : [];
